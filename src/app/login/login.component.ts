@@ -19,13 +19,12 @@ export class LoginComponent implements OnInit{
   isInvalidLogin = false
 
   constructor(private router : Router,
-    private hardcodedAuthenticationService : HardcodedAuthenticationServiceService
+    public hardcodedAuthenticationService : HardcodedAuthenticationServiceService
   ){}
 
   ngOnInit(): void {
       
   }
-
 
   loginProcess(){
     if(this.hardcodedAuthenticationService.authenticate(this.username,this.password)){
